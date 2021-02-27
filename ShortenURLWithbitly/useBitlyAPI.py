@@ -46,7 +46,7 @@ class letsGetBitlyShortURL(object):
         pass
     
     def __init__(self, urlList : MutableSequence) -> None:
-        self.groupGUID = "api-ssl.bitly.com" 
+        self.groupGUID = "https://api-ssl.bitly.com/v4/groups" 
         self.getShorten = 'https://api-ssl.bitly.com/v4/shorten'
         self.GUID = None
         self.urlList = urlList
@@ -56,8 +56,8 @@ class letsGetBitlyShortURL(object):
         headers = {
             'Authorization' : 'Bearer (your token Here)'
         }
-        r = requests.get('https://api-ssl.bitly.com/v4/groups',headers = headers)
-        if int(r.status_code) >= 300:
+        r = requests.get(self.groupGUID,headers = headers)
+        if int(r.status_code) >= 400:
             print(f"Something went wrong while API Call : Status Code {r.status_code}")
             print("Force Close : Exception Occured")
             raise letsGetBitlyShortURL.bitlyAPIResCode
@@ -79,7 +79,7 @@ class letsGetBitlyShortURL(object):
             "domain" : "bit.ly",
             "group_guid" : self.GUID
         }
-        r = requests.post('https://api-ssl.bitly.com/v4/shorten', headers=headers, json = data)
+        r = requests.post(self.getShorten, headers=headers, json = data)
         responseJSON = r.json()
         return responseJSON["link"]
     
@@ -106,4 +106,4 @@ class letsGetBitlyShortURL(object):
 if __name__=="__main__":
     URLS = []
     bitlyInstance = letsGetBitlyShortURL(URLS)
-    print(bitlyInstance.autoStream()) 
+    result = bitlyInstance.autoStream() 
