@@ -1,7 +1,8 @@
 Using Bitly API
 ===
 ***
-
+- [My blog post](https://velog.io/@andrewyoon10/Bitly-v4-API%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-bitly-shorten-URL-%EC%9E%90%EB%8F%99-%EB%B0%98%ED%99%98%EA%B8%B0%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90)
+***
 ### Bitly란?
 
   - [Bitly](https://bitly.com/) 는 단축 도메인 서비스이다. 단축도메인이란 주소를 축소하여 제공하는 서비스로, '축약 도메인'이라고도 한다. 영어로는 URL shortening이라고 한다.
@@ -22,4 +23,4 @@ Using Bitly API
 
 - [API Reference](https://dev.bitly.com/api-reference)
 
-- [My blog post](https://velog.io/@andrewyoon10/Bitly-v4-API%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-bitly-shorten-URL-%EC%9E%90%EB%8F%99-%EB%B0%98%ED%99%98%EA%B8%B0%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90)
+
